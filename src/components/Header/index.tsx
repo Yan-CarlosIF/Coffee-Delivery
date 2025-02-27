@@ -21,7 +21,7 @@ function Header() {
   );
 
   useEffect(() => {
-    fetch("https://geolocation-db.com/json/")
+    fetch("https://ipwhois.app/json/")
       .then((response) => response.json())
       .then((data) => {
         setLocation(`${data.city}, ${data.country_code}`);

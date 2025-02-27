@@ -18,6 +18,7 @@ export const Actions = styled.div`
   justify-content: center;
   gap: 0.75rem;
   width: 12.0625rem;
+  white-space: nowrap;
 `;
 
 export const BaseButton = styled.button`
