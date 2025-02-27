@@ -69,4 +69,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 
 - [ ] Adicionar validação de formulários com Zod.
 
-#### Feito com 💜 por Yan Carlos.
+#### Feito por [Yan Carlos](https://github.com/Yan-CarlosIF).
