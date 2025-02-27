@@ -12,7 +12,7 @@ import {
   TitlesConteiner,
 } from "./styles";
 import { CartCoffeesListContext } from "../../context/cartProductsList";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import CoffeesCardForm from "./components/coffeesCard";
 import { MapPinLine } from "@phosphor-icons/react";
 import { useForm } from "react-hook-form";
@@ -31,7 +31,7 @@ export interface formSchema {
 function Checkout() {
   const { cart, paymentMethod } = useContext(CartCoffeesListContext);
   const { register, setValue, handleSubmit, formState } = useForm({
-    mode: "onChange",
+    mode: "onBlur",
     defaultValues: {
       cep: "",
       rua: "",
@@ -44,6 +44,10 @@ function Checkout() {
   });
 
   const form = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    setValue("paymentMethod", paymentMethod);
+  }, [paymentMethod, setValue]);
 
   if (cart.length === 0) {
     return (
@@ -138,7 +142,7 @@ function Checkout() {
           </FormInputConteiner>
 
           <input type="hidden" {...register("paymentMethod")} />
-          <PaymentCard setValue={setValue} />
+          <PaymentCard />
         </FormConteiner>
 
         <CoffeesCardForm

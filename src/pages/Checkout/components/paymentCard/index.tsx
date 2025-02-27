@@ -8,21 +8,14 @@ import {
 } from "./styles";
 import { useContext } from "react";
 import { CartCoffeesListContext } from "../../../../context/cartProductsList";
-import { UseFormSetValue } from "react-hook-form";
-import { formSchema } from "../..";
 
-interface PaymentButtonProps {
-  setValue: UseFormSetValue<formSchema>;
-}
-
-const PaymentCard = ({ setValue }: PaymentButtonProps) => {
+const PaymentCard = () => {
   const { paymentMethod, setPaymentMethod } = useContext(
     CartCoffeesListContext
   );
 
   const handleButtonClick = (method: string) => {
     setPaymentMethod(method);
-    setValue("paymentMethod", method);
   };
 
   return (
