@@ -21,10 +21,10 @@ function Header() {
   );
 
   useEffect(() => {
-    fetch("https://ip-api.com/json/")
+    fetch("https://geolocation-db.com/json/")
       .then((response) => response.json())
       .then((data) => {
-        setLocation(`${data.city}, ${data.region}`);
+        setLocation(`${data.city}, ${data.country_code}`);
       })
       .catch((error) => console.error("Erro ao obter localização:", error));
   }, []);
