@@ -5,6 +5,7 @@ export const ItemConteiner = styled.div`
   align-items: center;
   gap: 0.75rem;
   line-height: 1;
+  white-space: nowrap;
 
   div {
     display: flex;
