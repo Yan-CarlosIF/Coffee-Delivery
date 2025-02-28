@@ -18,9 +18,9 @@ function Home() {
           </Texts>
           <Itens>
             <Item content="Compra simples e segura" icon="shoppingCart" />
-            <Item content="Compra simples e segura" icon="package" />
-            <Item content="Compra simples e segura" icon="timer" />
-            <Item content="Compra simples e segura" icon="coffee" />
+            <Item content="Embalagem mantém o café intacto" icon="package" />
+            <Item content="Entrega rápida e rastreada" icon="timer" />
+            <Item content="O café chega fresquinho até você" icon="coffee" />
           </Itens>
         </LeftSide>
         <img src={Coffee} alt="" />
